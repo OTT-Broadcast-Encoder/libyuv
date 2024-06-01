@@ -717,7 +717,7 @@ int I420ToNV12(const uint8_t* src_y,
     CopyPlane(src_y, src_stride_y, dst_y, dst_stride_y, width, height);
   }
   MergeUVPlane(src_u, src_stride_u, src_v, src_stride_v, dst_uv, dst_stride_uv,
-               halfwidth, halfheight);
+               halfwidth, halfheight * 2);
   return 0;
 }
 
